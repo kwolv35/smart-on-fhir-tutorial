@@ -25,7 +25,12 @@
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
-			alert(obv);
+			for (i in obv){
+				console.log(i);
+				for (key in obv[i]){
+					console.log( key + ": " + obv[i][key]);
+				}
+			}
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
           var dob = new Date(patient.birthDate);
