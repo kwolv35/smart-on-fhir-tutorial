@@ -50,6 +50,7 @@
 		  var heartRate = byCodes('2089-1');
 
           var p = defaultPatient();
+		  console.log(p);
           p.birthdate = dobStr;
           p.gender = gender;
           p.fname = fname;
